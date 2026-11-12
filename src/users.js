@@ -1,6 +1,7 @@
 import "./types.js";
 
 /**
+ * Gets users from JSON Placeholder
  * @returns {Promise<User[]>}
  */
 export async function getUsers() {
@@ -10,10 +11,11 @@ export async function getUsers() {
 }
 
 /**
+ * Acts like a simple search
  * @param {User[]} users
  * @param {string} name
  * @returns {User[]}
  */
 export function filterUsers(users, name) {
-  return users.filter((u) => u.name.toLowerCase() === name.toLowerCase());
+  return users.filter((u) => u.name.toLowerCase().trim().match(name.toLowerCase().trim()));
 }
