@@ -10,7 +10,6 @@
  * @prop {Company} company
  */
 
-
 /**
  * @typedef {Object} Address
  * @prop {string} street
